@@ -33,8 +33,8 @@
             skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             employeesBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-          
             barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -45,11 +45,8 @@
             comboBox2 = new System.Windows.Forms.ComboBox();
             label3 = new System.Windows.Forms.Label();
             simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            textBox1 = new System.Windows.Forms.TextBox();
-            label2 = new System.Windows.Forms.Label();
             groupBox3 = new System.Windows.Forms.GroupBox();
             richTextBox1 = new System.Windows.Forms.RichTextBox();
-            barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)ribbonControl).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)checkedListBoxControl1).BeginInit();
@@ -81,15 +78,11 @@
             // 
             employeesBarButtonItem.Id = 48;
             employeesBarButtonItem.Name = "employeesBarButtonItem";
-            // ss
+            // 
             // customersBarButtonItem
             // 
             customersBarButtonItem.Id = 49;
             customersBarButtonItem.Name = "customersBarButtonItem";
-            // 
-            // barButtonItem1
-            // 
-            
             // 
             // barButtonItem2
             // 
@@ -98,6 +91,12 @@
             barButtonItem2.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem2.ImageOptions.SvgImage");
             barButtonItem2.Name = "barButtonItem2";
             barButtonItem2.ItemClick += barButtonItem2_ItemClick;
+            // 
+            // barButtonItem3
+            // 
+            barButtonItem3.Caption = "barButtonItem3";
+            barButtonItem3.Id = 52;
+            barButtonItem3.Name = "barButtonItem3";
             // 
             // ribbonPage
             // 
@@ -149,11 +148,9 @@
             groupBox2.Controls.Add(comboBox2);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(simpleButton1);
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(label2);
             groupBox2.Location = new System.Drawing.Point(254, 164);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new System.Drawing.Size(566, 148);
+            groupBox2.Size = new System.Drawing.Size(566, 119);
             groupBox2.TabIndex = 3;
             groupBox2.TabStop = false;
             groupBox2.Text = "Ayar Paneli";
@@ -163,7 +160,7 @@
             comboBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "1", "7", "28", "60", "90", "120", "240", "365" });
-            comboBox2.Location = new System.Drawing.Point(151, 51);
+            comboBox2.Location = new System.Drawing.Point(150, 20);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new System.Drawing.Size(62, 27);
             comboBox2.TabIndex = 6;
@@ -172,7 +169,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
-            label3.Location = new System.Drawing.Point(7, 51);
+            label3.Location = new System.Drawing.Point(6, 20);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(420, 25);
             label3.TabIndex = 5;
@@ -183,37 +180,19 @@
             simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
             simpleButton1.Appearance.Options.UseFont = true;
             simpleButton1.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("simpleButton1.ImageOptions.SvgImage");
-            simpleButton1.Location = new System.Drawing.Point(151, 84);
+            simpleButton1.Location = new System.Drawing.Point(150, 53);
             simpleButton1.Name = "simpleButton1";
             simpleButton1.Size = new System.Drawing.Size(218, 58);
             simpleButton1.TabIndex = 4;
             simpleButton1.Text = "Veri iletimini başlat";
             simpleButton1.Click += simpleButton1_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
-            textBox1.Location = new System.Drawing.Point(69, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(191, 26);
-            textBox1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
-            label2.Location = new System.Drawing.Point(0, 20);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(540, 25);
-            label2.TabIndex = 2;
-            label2.Text = "Veriler                            E-Posta adresine gönderilsin.";
-            // 
             // groupBox3
             // 
             groupBox3.Controls.Add(richTextBox1);
-            groupBox3.Location = new System.Drawing.Point(248, 318);
+            groupBox3.Location = new System.Drawing.Point(248, 281);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new System.Drawing.Size(566, 245);
+            groupBox3.Size = new System.Drawing.Size(566, 282);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Text = "Log";
@@ -222,15 +201,9 @@
             // 
             richTextBox1.Location = new System.Drawing.Point(6, 14);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new System.Drawing.Size(554, 208);
+            richTextBox1.Size = new System.Drawing.Size(554, 262);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "";
-            // 
-            // barButtonItem3
-            // 
-            barButtonItem3.Caption = "barButtonItem3";
-            barButtonItem3.Id = 52;
-            barButtonItem3.Name = "barButtonItem3";
             // 
             // Form1
             // 
@@ -272,8 +245,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RichTextBox richTextBox1;

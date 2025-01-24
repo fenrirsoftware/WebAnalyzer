@@ -98,7 +98,7 @@ namespace DXApplication6
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || checkedListBoxControl1.CheckedItems.Count != 1 || (comboBox2.SelectedItem == null || string.IsNullOrWhiteSpace(comboBox2.Text)))
+            if ( checkedListBoxControl1.CheckedItems.Count != 1 || (comboBox2.SelectedItem == null || string.IsNullOrWhiteSpace(comboBox2.Text)))
             {
                 AppendToRichTextBox(richTextBox1, "[WARNING] Gerekli alanlar doldurulmadı.", true);
                 MessageBox.Show("Lütfen gerekli alanları doldurunuz.");
@@ -272,7 +272,6 @@ namespace DXApplication6
 
                 SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
 
-                // Add headers
                 Row headerRow = new Row();
                 headerRow.Append(
                     ConstructCell("Query"),
@@ -281,7 +280,7 @@ namespace DXApplication6
                 );
                 sheetData.AppendChild(headerRow);
 
-                // Add Google Search Console data
+                
                 if (!string.IsNullOrEmpty(performanceData))
                 {
                     var performanceRows = performanceData.Split('\n');
@@ -290,7 +289,7 @@ namespace DXApplication6
                         if (!string.IsNullOrEmpty(rowData))
                         {
                             var cellsData = rowData.Split(new[] { ',', ':' }, StringSplitOptions.RemoveEmptyEntries);
-                            if (cellsData.Length == 6) // 
+                            if (cellsData.Length == 6) 
                             {
                                 Row perfRow = new Row();
                                 perfRow.Append(
