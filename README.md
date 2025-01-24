@@ -39,12 +39,3 @@ DevExpress bileşenlerini kullanmak için [DevExpress Web Sitesi](https://www.de
 
 ![Proje Ekran Görüntüsü](/project_screenshot.png)
 
-## Kullanım
-
-1. Gerekli API anahtarlarını alın:
-   - **Google Search Console API**: [Google Search Console API Documentation](https://developers.google.com/webmaster-tools/search-console-api)
-   - **Moz API**: [Moz API Documentation](https://moz.com/products/api)
-
-2. Projeyi yerel ortamınıza klonlayın:
-   ```bash
-   git clone https://github.com/ozhanyildirim/Google-Search-Console-DA-PA-API.git
