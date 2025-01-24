@@ -37,7 +37,7 @@ DevExpress bileşenlerini kullanmak için [DevExpress Web Sitesi](https://www.de
 
 ## Proje Görselleri
 
-![Proje Ekran Görüntüsü](./images/project_screenshot.png)
+![Proje Ekran Görüntüsü](/project_screenshot.png)
 
 ## Kullanım
 
