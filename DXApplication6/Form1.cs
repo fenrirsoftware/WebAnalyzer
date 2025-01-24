@@ -3,13 +3,6 @@ using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
@@ -17,7 +10,6 @@ using Google.Apis.SearchConsole.v1;
 using Google.Apis.SearchConsole.v1.Data;
 using System.IO;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Text.Json;
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
@@ -79,7 +71,7 @@ namespace DXApplication6
                 var service = new SearchConsoleService(new BaseClientService.Initializer
                 {
                     HttpClientInitializer = credential,
-                    ApplicationName = "Search Console API C# Example"
+                    ApplicationName = "Search Console API C#"
                 });
 
                 var sitesResponse = service.Sites.List().Execute();
@@ -178,14 +170,13 @@ namespace DXApplication6
                     AppendToRichTextBox(richTextBox1, "[WARNING] Seçilen site için veri bulunamadı.", true);
                 }
 
-                // Call AnalyzeDomain and get results
+             
                 var domainResults = AnalyzeDomain(richTextBox1, checkedListBoxControl1);
 
-                if (domainResults.domain != null) // Check if analysis was successful
+                if (domainResults.domain != null) 
                 {
                     var (domain, domainAsEntered, mozLinks, mozPA, mozDA, mozRank, majesticLinks, majesticRefDomains, majesticTF) = domainResults;
 
-                    // Create Excel file for domain analysis
                     string domainFileName = $"domain_analysis_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
                     string domainFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), domainFileName);
                     CreateDomainExcelFile(domainFilePath, domain, domainAsEntered, mozLinks, mozPA, mozDA, mozRank, majesticLinks, majesticRefDomains, majesticTF);
@@ -299,7 +290,7 @@ namespace DXApplication6
                         if (!string.IsNullOrEmpty(rowData))
                         {
                             var cellsData = rowData.Split(new[] { ',', ':' }, StringSplitOptions.RemoveEmptyEntries);
-                            if (cellsData.Length == 6) // We've added one more because of an extra comma in the string
+                            if (cellsData.Length == 6) // 
                             {
                                 Row perfRow = new Row();
                                 perfRow.Append(
@@ -440,7 +431,6 @@ namespace DXApplication6
             richTextBox.SelectionStart = start;
             richTextBox.SelectionLength = formattedMessage.Length;
             richTextBox.SelectionColor = color;
-
             richTextBox.SelectionStart = richTextBox.TextLength;
             richTextBox.SelectionColor = richTextBox.ForeColor;
         }
